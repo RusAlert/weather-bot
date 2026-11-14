@@ -1,1 +1,1 @@
-worker: python bot.py
+worker: export TZ=Europe/Moscow && python bot.py
