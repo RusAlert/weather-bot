@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import pytz
 import os
 import sys
 import re
@@ -172,7 +173,7 @@ def run_bot():
 
     bot = Bot(token=BOT_TOKEN)
     dp = Dispatcher()
-    scheduler = AsyncIOScheduler(timezone="Europe/Volgograd")
+    scheduler = AsyncIOScheduler(timezone=pytz.timezone("Europe/Moscow"))
 
     WIND_DIR_RU = {
         "nw": "СЗ", "n": "С", "ne": "СВ", "e": "В",
